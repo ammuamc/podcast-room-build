@@ -163,6 +163,150 @@
                 </div>
             </section>
 
+            <!-- Barebones Setup Option -->
+            <section id="barebones-setup" class="collapsible-section">
+                <h2>💰 Budget-Conscious Option: Barebones Setup</h2>
+                <p>Start podcasting with minimal investment - sync everything in post-production.</p>
+                
+                <details class="barebones-details">
+                    <summary><h3>View Barebones Setup Details (~$6,570)</h3></summary>
+                    
+                    <div class="barebones-content">
+                        <div class="barebones-grid">
+                            <div class="barebones-breakdown">
+                                <h4>What's Included</h4>
+                                
+                                <h5>Audio Equipment ($2,700)</h5>
+                                <ul>
+                                    <li>Shure SM7B (4x): $1,800</li>
+                                    <li>Elgato Wave Mic Arm LP (4x): $400</li>
+                                    <li>XLR Cables (4x Kopul 25'): $100</li>
+                                    <li>Pop Filters (4x): $100</li>
+                                    <li>Zoom PodTrak P8: $300</li>
+                                </ul>
+                                
+                                <h5>Video Equipment ($3,570)</h5>
+                                <ul>
+                                    <li>Cameras (3x Sony ZV-E10): $2,100</li>
+                                    <li>Lenses: $900</li>
+                                    <li>Memory Cards (6x): $180</li>
+                                    <li>AC Power Adapters (3x): $90</li>
+                                    <li>Basic Tripods (3x): $300</li>
+                                </ul>
+                                
+                                <h5>Minimal Infrastructure ($300)</h5>
+                                <ul>
+                                    <li>Basic HDMI monitor for framing: $200</li>
+                                    <li>Extension cords/power strips: $100</li>
+                                </ul>
+                                
+                                <div class="total-callout">
+                                    <strong>Total Cost: ~$6,570</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="barebones-workflow">
+                                <h4>The Manual Workflow</h4>
+                                <ol>
+                                    <li><strong>Setup:</strong> Position all cameras and frame shots</li>
+                                    <li><strong>Start Recording:</strong>
+                                        <ul>
+                                            <li>Start all 3 cameras individually</li>
+                                            <li>Start PodTrak P8 recording</li>
+                                            <li>Clap loudly for sync point</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>During Recording:</strong>
+                                        <ul>
+                                            <li>No live monitoring of shots</li>
+                                            <li>No ability to switch cameras</li>
+                                            <li>Hope everything is recording properly</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Post-Production:</strong>
+                                        <ul>
+                                            <li>Transfer files from 3 cameras + audio</li>
+                                            <li>Manually sync using clap in Premiere</li>
+                                            <li>Color correct each camera</li>
+                                            <li>Cut between cameras manually or with AutoPod</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                                
+                                <div class="time-warning">
+                                    <h5>⏱️ Time Investment</h5>
+                                    <p><strong>Extra 20-30 minutes per episode</strong> for manual sync and setup</p>
+                                    <p>For daily podcasts: <strong>10+ hours per month</strong> of additional work</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h5>Pros:</h5>
+                                <ul>
+                                    <li>Lowest upfront cost</li>
+                                    <li>Professional quality mics and cameras</li>
+                                    <li>Can upgrade later</li>
+                                    <li>Good for occasional recording</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h5>Cons:</h5>
+                                <ul>
+                                    <li>No live switching</li>
+                                    <li>Manual sync required</li>
+                                    <li>No confidence monitoring</li>
+                                    <li>Higher risk of recording failures</li>
+                                    <li>No streaming capability</li>
+                                    <li>Significant time cost</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-note">
+                            <h4>Cost Comparison</h4>
+                            <table class="simple-comparison">
+                                <tr>
+                                    <th>Setup Type</th>
+                                    <th>Equipment Cost</th>
+                                    <th>Monthly Time Cost</th>
+                                </tr>
+                                <tr>
+                                    <td>Barebones</td>
+                                    <td>$6,570</td>
+                                    <td>10+ hours</td>
+                                </tr>
+                                <tr>
+                                    <td>Recommended (ATEM 4K8)</td>
+                                    <td>$14,855</td>
+                                    <td>0 hours</td>
+                                </tr>
+                                <tr>
+                                    <td>Difference</td>
+                                    <td>+$8,285</td>
+                                    <td>-10 hours/month</td>
+                                </tr>
+                            </table>
+                            
+                            <p class="roi-note"><strong>ROI Calculation:</strong> At $50/hour, the time saved pays for the upgrade in just 16 months. For a daily podcast, the ATEM setup is actually more economical long-term.</p>
+                        </div>
+                        
+                        <div class="recommendation-box">
+                            <h4>Who This Is For</h4>
+                            <ul>
+                                <li>✅ Hobbyists recording occasionally</li>
+                                <li>✅ Those testing the podcast waters</li>
+                                <li>✅ Creators with more time than budget</li>
+                                <li>❌ Daily podcasters</li>
+                                <li>❌ Professional productions</li>
+                                <li>❌ Anyone valuing their time</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+            </section>
+
             <!-- Cost Calculator -->
             <section class="cost-calculator">
                 <div class="calculator-header">
@@ -324,6 +468,7 @@
                         
                         <div class="calculator-buttons">
                             <p><strong>Quick Setup Options:</strong></p>
+                            <button onclick="selectPreset('barebones')" class="calculator-button">💰 Barebones ($6,570)</button>
                             <button onclick="selectPreset('recommended')" class="calculator-button recommended-preset">⭐ Recommended Setup ($14,855)</button>
                             <button onclick="selectPreset('basic')" class="calculator-button">Basic Setup ($16,175)</button>
                             <button onclick="selectPreset('professional')" class="calculator-button">Professional Setup ($18,315)</button>
@@ -1594,6 +1739,11 @@ Program → ATEM Program → USB → Resolve Program</code></pre>
 
         // Preset configurations
         const presets = {
+            barebones: [
+                'sm7b', 'podtrak', 'cameras', 'lenses', 'tripods',
+                'boom-arms', 'xlr-cables', 'pop-filters', 'headphones',
+                'ac-adapters', 'memory-cards', 'power-infrastructure', 'ssd-storage'
+            ],
             recommended: [
                 'sm7b', 'podtrak', 'atem-4k8', 'cameras', 'lenses', 'tripods', 'monitor',
                 'boom-arms', 'xlr-cables', 'pop-filters', 'headphones',
