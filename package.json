@@ -1,0 +1,34 @@
+{
+  "name": "podcast-room-build",
+  "version": "1.0.0",
+  "description": "Video Podcast Room Setup & Workflow Guide - A comprehensive guide for designing and documenting a complete video podcast production system for daily recording with efficient post-production turnaround.",
+  "main": "video-podcast-setup-guide.html",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -o",
+    "build": "echo 'No build step required for static site'",
+    "start": "npx http-server . -p 8080"
+  },
+  "keywords": [
+    "podcast",
+    "video-production",
+    "atem",
+    "audio-equipment",
+    "video-equipment",
+    "streaming",
+    "production-workflow",
+    "equipment-calculator"
+  ],
+  "author": "Video Podcast Production Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ammuamc/podcast-room-build.git"
+  },
+  "homepage": "https://github.com/ammuamc/podcast-room-build#readme",
+  "bugs": {
+    "url": "https://github.com/ammuamc/podcast-room-build/issues"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
