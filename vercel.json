@@ -7,7 +7,7 @@
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/styles.css",
       "headers": [
         {
           "key": "Cache-Control",
@@ -16,7 +16,7 @@
       ]
     },
     {
-      "source": "/*.html",
+      "source": "/video-podcast-setup-guide.html",
       "headers": [
         {
           "key": "Cache-Control",

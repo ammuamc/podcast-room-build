@@ -8,8 +8,8 @@
 :root {
     /* Primary Colors - Dark Theme */
     --color-primary: #e1e5e9;      /* Light text for dark backgrounds */
-    --color-secondary: #64b5f6;    /* Bright blue - good contrast on dark */
-    --color-accent: #ba68c8;       /* Purple - highlights, professional setup */
+    --color-secondary: #a4633d;    /* Bright blue - good contrast on dark */
+    --color-accent: #dd3f00;       /* Purple - highlights, professional setup */
     
     /* Neutral Colors - Dark Theme */
     --color-dark: #0d1117;         /* Very dark - navigation, strong contrast */
@@ -29,8 +29,8 @@
     --color-primary-20: rgba(225, 229, 233, 0.2);
     --color-secondary-20: rgba(100, 181, 246, 0.2);
     --color-secondary-30: rgba(100, 181, 246, 0.3);
-    --color-accent-20: rgba(186, 104, 200, 0.2);
-    --color-accent-30: rgba(186, 104, 200, 0.3);
+    --color-accent-20: rgba(200, 104, 104, 0.2);
+    --color-accent-30: rgba(0, 0, 0, 0.3);
     --color-success-20: rgba(63, 185, 80, 0.2);
     --color-success-30: rgba(63, 185, 80, 0.3);
     --color-light-30: rgba(139, 148, 158, 0.3);
@@ -263,12 +263,13 @@ hr {
    Cost Calculator Styles
    ===================================================== */
 .cost-calculator {
-    background: var(--gradient-primary);
-    color: var(--color-background);
+    background: var(--color-surface);
+    color: var(--color-primary);
     padding: 2rem;
     margin: 2rem 0;
     border-radius: 12px;
     box-shadow: 0 8px 25px var(--color-primary-20);
+    border: 1px solid var(--color-light-30);
 }
 
 .calculator-header {
@@ -277,7 +278,7 @@ hr {
 }
 
 .calculator-header h2 {
-    color: var(--color-background);
+    color: var(--color-primary);
     margin: 0 0 0.5rem 0;
     border: none;
     padding: 0;
@@ -311,11 +312,12 @@ hr {
 }
 
 .equipment-category h4 {
-    color: var(--color-background);
+    color: var(--color-primary);
     margin: 0 0 1rem 0;
     font-size: 1.2rem;
-    border-bottom: 2px solid var(--color-light-30);
+    border-bottom: 2px solid var(--color-secondary);
     padding-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .equipment-item {
