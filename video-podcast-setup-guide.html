@@ -202,6 +202,246 @@
                 </div>
             </section>
 
+            <!-- Hybrid Recording Approach -->
+            <section id="hybrid-recording" class="collapsible-section">
+                <h2>Hybrid Recording Approach: Best of Both Worlds</h2>
+                <p>Eliminate daily card dumping while maintaining failsafe backup recording.</p>
+                
+                <details class="recording-approach">
+                    <summary><h3>Direct-to-Computer Recording with Hardware Backup</h3></summary>
+                    
+                    <div class="hybrid-content">
+                        <h4>The Smart Hybrid Approach</h4>
+                        <p>Record directly to your computer for convenience while maintaining hardware recording as a failsafe backup.</p>
+                        
+                        <div class="option-comparison">
+                            <div class="option-card">
+                                <h5>Primary Recording (Failsafe)</h5>
+                                <ul>
+                                    <li><strong>ATEM → SSD:</strong> Always recording ISOs as backup</li>
+                                    <li><strong>PodTrak P8 → SD Card:</strong> Always recording multitrack audio</li>
+                                    <li>These run independently of your computer</li>
+                                    <li>100% reliable, no dependency on software</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="option-card">
+                                <h5>Secondary Recording (Convenience)</h5>
+                                <ul>
+                                    <li><strong>DaVinci Resolve:</strong> Recording for immediate access</li>
+                                    <li>All ISO video feeds recorded directly</li>
+                                    <li>All audio tracks from PodTrak via USB</li>
+                                    <li>If it crashes, you still have card/SSD recordings</li>
+                                    <li>If it works, you skip the card dumping step</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h4>Workflow Steps</h4>
+                        <ol>
+                            <li><strong>Start hardware recording first:</strong>
+                                <ul>
+                                    <li>Hit record on ATEM (to SSD)</li>
+                                    <li>Hit record on PodTrak P8 (to SD)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Then start DaVinci recording:</strong>
+                                <ul>
+                                    <li>This gives you instant file access</li>
+                                    <li>But hardware backup is running</li>
+                                </ul>
+                            </li>
+                            <li><strong>If computer is stable:</strong>
+                                <ul>
+                                    <li>Use the DaVinci files</li>
+                                    <li>Format cards/SSD for next day</li>
+                                </ul>
+                            </li>
+                            <li><strong>If computer crashes:</strong>
+                                <ul>
+                                    <li>You have full backup on cards/SSD</li>
+                                    <li>Only lose convenience, not content</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h5>Benefits:</h5>
+                                <ul>
+                                    <li>99% of time: save 10-15 minutes daily</li>
+                                    <li>1% of time: fall back to cards</li>
+                                    <li>Zero risk of losing recordings</li>
+                                    <li>Instant access to files when it works</li>
+                                    <li>Peace of mind with dual recording</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h5>Requirements:</h5>
+                                <ul>
+                                    <li>Powerful computer (32GB RAM minimum)</li>
+                                    <li>Fast storage (SSD for recording)</li>
+                                    <li>Stable system (no other apps running)</li>
+                                    <li>DaVinci Resolve Studio ($295)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                
+                <details class="davinci-setup">
+                    <summary><h3>DaVinci Resolve Setup Guide</h3></summary>
+                    
+                    <div class="davinci-content">
+                        <h4>Initial DaVinci Configuration</h4>
+                        
+                        <div class="setup-section">
+                            <h5>One-Time Setup:</h5>
+                            <ol>
+                                <li><strong>Connect Hardware:</strong>
+                                    <ul>
+                                        <li>ATEM → Computer via USB-C</li>
+                                        <li>PodTrak P8 → Computer via USB-C</li>
+                                    </ul>
+                                </li>
+                                <li><strong>DaVinci Preferences:</strong>
+                                    <ul>
+                                        <li>Go to: Preferences → System → Audio</li>
+                                        <li>Set "Audio Device" to "PodTrak P8"</li>
+                                        <li>Channel Configuration: Manual</li>
+                                        <li>Input Channels: 12</li>
+                                        <li>Output Channels: 2</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Create Project Template:</strong>
+                                    <ul>
+                                        <li>Timeline Frame Rate: Match your cameras</li>
+                                        <li>Resolution: 1920x1080 or higher</li>
+                                        <li>Audio Sample Rate: 48kHz</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <h4>PodTrak P8 USB Setup</h4>
+                        <div class="setup-section">
+                            <h5>On the PodTrak P8:</h5>
+                            <ol>
+                                <li>Connect USB-C to your computer</li>
+                                <li>Press MENU → Audio Interface → On</li>
+                                <li>Select USB Audio Mode: "Multi Track" (not "Stereo Mix")</li>
+                                <li>Sample Rate: 48kHz (match your video)</li>
+                            </ol>
+                            
+                            <h5>Channel Routing:</h5>
+                            <pre><code>Channels 1-6: Your XLR inputs (mics)
+Channels 7-8: USB return from computer
+Channels 9-10: Sound pad outputs
+Channels 11-12: Main mix</code></pre>
+                        </div>
+                        
+                        <h4>Recording Session Setup</h4>
+                        <div class="setup-section">
+                            <h5>For Each Recording:</h5>
+                            <ol>
+                                <li><strong>Create New Project</strong> from your template</li>
+                                <li><strong>Go to Fairlight page</strong></li>
+                                <li><strong>Add Audio Tracks:</strong>
+                                    <ul>
+                                        <li>Right-click in mixer → Add Track → Audio</li>
+                                        <li>Add 4 Mono tracks (one per mic)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Route Each Track:</strong>
+                                    <ul>
+                                        <li>Click "Input" → Patch Input/Output</li>
+                                        <li>Source: Audio 1, Audio 2, etc. (from P8)</li>
+                                        <li>Destination: Track 1, Track 2, etc.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Configure Video Capture:</strong>
+                                    <ul>
+                                        <li>Media page → Capture</li>
+                                        <li>Select ATEM as video source</li>
+                                        <li>Enable "Capture all inputs as individual clips"</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Arm tracks</strong> for recording (R button)</li>
+                                <li><strong>Start Recording</strong> in capture window</li>
+                            </ol>
+                        </div>
+                        
+                        <h4>Signal Flow Diagram</h4>
+                        <pre class="signal-flow"><code>Mic 1 → P8 Input 1 → USB Channel 1 → Resolve Track 1
+Mic 2 → P8 Input 2 → USB Channel 2 → Resolve Track 2
+Mic 3 → P8 Input 3 → USB Channel 3 → Resolve Track 3
+Mic 4 → P8 Input 4 → USB Channel 4 → Resolve Track 4
+
+Camera 1 → ATEM Input 1 → USB → Resolve ISO 1
+Camera 2 → ATEM Input 2 → USB → Resolve ISO 2
+Camera 3 → ATEM Input 3 → USB → Resolve ISO 3
+Program → ATEM Program → USB → Resolve Program</code></pre>
+                        
+                        <h4>Troubleshooting</h4>
+                        <div class="troubleshooting">
+                            <h5>No audio showing in Resolve?</h5>
+                            <ul>
+                                <li>Check P8 is in Multi Track mode</li>
+                                <li>Restart Resolve after connecting P8</li>
+                                <li>Check Windows/Mac audio settings</li>
+                            </ul>
+                            
+                            <h5>Only getting 2 channels?</h5>
+                            <ul>
+                                <li>P8 might be in Stereo Mix mode</li>
+                                <li>Change to Multi Track mode</li>
+                            </ul>
+                            
+                            <h5>Crackling/dropouts?</h5>
+                            <ul>
+                                <li>Increase buffer size in Resolve</li>
+                                <li>Check USB cable quality</li>
+                                <li>Close other applications</li>
+                                <li>Use dedicated USB bus</li>
+                            </ul>
+                        </div>
+                        
+                        <h4>Computer Requirements</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Minimum</th>
+                                    <th>Recommended</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>16GB</td>
+                                    <td>32GB+</td>
+                                </tr>
+                                <tr>
+                                    <td>Storage</td>
+                                    <td>500GB SSD</td>
+                                    <td>2TB NVMe SSD</td>
+                                </tr>
+                                <tr>
+                                    <td>GPU</td>
+                                    <td>4GB VRAM</td>
+                                    <td>8GB+ VRAM</td>
+                                </tr>
+                                <tr>
+                                    <td>USB</td>
+                                    <td>USB 3.0</td>
+                                    <td>USB-C/Thunderbolt</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+            </section>
+
             <section id="overview">
                 <h2>Overview</h2>
                 <p>This document outlines a complete video podcast production system designed for daily recording with efficient post-production turnaround. The setup supports 4 podcast microphones, 3 cameras with live switching capabilities, and maintains individual track recording for maximum flexibility in post.</p>
