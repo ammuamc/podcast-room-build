@@ -8,8 +8,8 @@
 :root {
     /* Primary Colors - Dark Theme */
     --color-primary: #e1e5e9;      /* Light text for dark backgrounds */
-    --color-secondary: #a4633d;    /* Bright blue - good contrast on dark */
-    --color-accent: #dd3f00;       /* Purple - highlights, professional setup */
+    --color-secondary: #ffffff;    /* Bright blue - good contrast on dark */
+    --color-accent: #ffffff;       /* Purple - highlights, professional setup */
     
     /* Neutral Colors - Dark Theme */
     --color-dark: #0d1117;         /* Very dark - navigation, strong contrast */
@@ -1390,5 +1390,741 @@ details[open] summary {
 @media (max-width: 768px) {
     .autopod-content {
         padding: 1rem;
+    }
+}
+
+/* =====================================================
+   Camera Options Section Styles
+   ===================================================== */
+#camera-options {
+    margin: 3rem 0;
+}
+
+#camera-options h2 {
+    color: var(--color-primary);
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    text-align: center;
+    border-left: none;
+    padding: 0;
+}
+
+#camera-options > p {
+    color: var(--color-light);
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0 0 3rem 0;
+}
+
+/* Camera Options Grid - 2 cards per row, then full width for 3rd */
+.camera-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Individual Camera Cards */
+.camera-card {
+    background: var(--color-surface);
+    border-radius: 12px;
+    border: 1px solid var(--color-light-30);
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--color-primary-10);
+    transition: all 0.3s ease;
+}
+
+.camera-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--color-primary-20);
+}
+
+/* Full width for the Sony option */
+.camera-card.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Card Headers with distinct colors */
+.camera-header {
+    position: relative;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iphone-option .camera-header {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.blackmagic-option .camera-header {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+}
+
+.sony-option .camera-header {
+    background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+}
+
+.camera-header h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.3rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.price-badge {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Card Content */
+.camera-content {
+    padding: 2rem;
+}
+
+/* Equipment Grid for Sony option (full width) */
+.equipment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Section Styling */
+.equipment-section h4,
+.features-section h4,
+.best-for-section h4 {
+    color: var(--color-primary);
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+}
+
+.equipment-section ul,
+.features-section ul,
+.best-for-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.equipment-section li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-light-30);
+    color: var(--color-primary);
+}
+
+.equipment-section li:last-child {
+    border-bottom: none;
+}
+
+.equipment-section li span {
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+.features-section li,
+.best-for-section li {
+    padding: 0.4rem 0;
+    color: var(--color-light);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.features-section li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.best-for-section li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+/* Camera Comparison Section */
+.camera-comparison-section {
+    background: var(--color-background);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0 0 0;
+    border: 1px solid var(--color-light-30);
+    box-shadow: 0 4px 15px var(--color-primary-10);
+}
+
+.camera-comparison-section h3 {
+    color: var(--color-primary);
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 1rem;
+}
+
+.camera-comparison-section .comparison-table {
+    width: 100%;
+    background: var(--color-surface);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-light-30);
+}
+
+.camera-comparison-section .comparison-table th {
+    background: var(--color-background);
+    color: var(--color-primary);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.camera-comparison-section .comparison-table th:nth-child(2) {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+}
+
+.camera-comparison-section .comparison-table th:nth-child(3) {
+    background: rgba(33, 150, 243, 0.2);
+    color: #2196F3;
+}
+
+.camera-comparison-section .comparison-table th:nth-child(4) {
+    background: rgba(156, 39, 176, 0.2);
+    color: #9C27B0;
+}
+
+.camera-comparison-section .comparison-table td {
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--color-light-30);
+}
+
+.camera-comparison-section .comparison-table tr:hover {
+    background: var(--color-background-80);
+}
+
+.camera-comparison-section .comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive Design for Camera Options */
+@media (max-width: 1024px) {
+    .camera-options-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .equipment-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #camera-options {
+        margin: 2rem 0;
+    }
+    
+    #camera-options h2 {
+        font-size: 1.7rem;
+    }
+    
+    .camera-options-grid {
+        gap: 1rem;
+    }
+    
+    .camera-content {
+        padding: 1.5rem;
+    }
+    
+    .camera-header {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .camera-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .price-badge {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .camera-comparison-section {
+        padding: 1rem;
+    }
+    
+    .camera-comparison-section .comparison-table th,
+    .camera-comparison-section .comparison-table td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .camera-comparison-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .equipment-section li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+    
+    .camera-comparison-section .comparison-table th,
+    .camera-comparison-section .comparison-table td {
+        padding: 0.3rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* =====================================================
+   Compact Audio Equipment Styles
+   ===================================================== */
+.audio-equipment-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.microphones-section {
+    background: var(--color-surface);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-secondary);
+}
+
+.mic-recommendation h4 {
+    color: var(--color-primary);
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.mic-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feature-tag {
+    background: var(--color-success-20);
+    color: var(--color-success);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.audio-accessories-section {
+    background: var(--color-surface);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-accent);
+}
+
+.accessory-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.accessory-item {
+    background: var(--color-background);
+    border: 1px solid var(--color-light-30);
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.accessory-item strong {
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.accessory-item small {
+    color: var(--color-light);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.mixer-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.mixer-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-light-30);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.mixer-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--color-primary-10);
+}
+
+.mixer-header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.mixer-card.recommended .mixer-header {
+    background: var(--color-success-20);
+}
+
+.mixer-card.premium .mixer-header {
+    background: var(--color-secondary-20);
+}
+
+.mixer-card.hybrid .mixer-header {
+    background: var(--color-accent-20);
+}
+
+.mixer-header h4 {
+    color: var(--color-primary);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.price-tag {
+    background: var(--color-background);
+    color: var(--color-success);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.recommended-badge,
+.premium-badge,
+.hybrid-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.recommended-badge {
+    background: var(--color-success);
+    color: white;
+}
+
+.premium-badge {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.hybrid-badge {
+    background: var(--color-accent);
+    color: white;
+}
+
+.mixer-features {
+    list-style: none;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+}
+
+.mixer-features li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+    color: var(--color-light);
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.mixer-features li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+}
+
+/* =====================================================
+   Compact Section Styles
+   ===================================================== */
+.compact-section {
+    background: var(--color-surface);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid var(--color-light-30);
+}
+
+.compact-section h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+    border-left: none;
+    padding: 0;
+}
+
+.monitor-card {
+    background: var(--color-background);
+    border: 1px solid var(--color-light-30);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.monitor-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.monitor-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.spec-item {
+    background: var(--color-secondary-20);
+    color: var(--color-secondary);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.monitor-price {
+    background: var(--color-success-20);
+    color: var(--color-success);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.monitor-description {
+    color: var(--color-light);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.camera-accessories-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.accessory-category h3 {
+    color: var(--color-primary);
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+}
+
+.accessory-detail {
+    background: var(--color-background);
+    border: 1px solid var(--color-light-30);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.accessory-detail strong {
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.accessory-detail small {
+    color: var(--color-light);
+    display: block;
+    margin-top: 0.3rem;
+}
+
+/* =====================================================
+   Video Switching Styles
+   ===================================================== */
+.switching-overview {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--color-surface);
+    border-radius: 8px;
+}
+
+.switcher-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.switcher-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-light-30);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.switcher-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--color-primary-10);
+}
+
+.switcher-card.recommended {
+    border: 2px solid var(--color-success);
+    position: relative;
+}
+
+.switcher-card h3 {
+    color: var(--color-primary);
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.switcher-specs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.spec-badge {
+    background: var(--color-secondary-20);
+    color: var(--color-secondary);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.price-badge {
+    background: var(--color-success-20);
+    color: var(--color-success);
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.limitation-note,
+.recommended-note {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.limitation-note {
+    background: var(--color-accent-20);
+    border: 1px solid var(--color-accent);
+}
+
+.recommended-note {
+    background: var(--color-success-20);
+    border: 1px solid var(--color-success);
+}
+
+.iso-recording-info {
+    background: var(--color-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid var(--color-light-30);
+}
+
+.iso-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.iso-benefit,
+.iso-storage {
+    background: var(--color-surface);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.iso-benefit h4,
+.iso-storage h4 {
+    color: var(--color-primary);
+    margin: 0 0 0.8rem 0;
+    font-size: 1rem;
+}
+
+.iso-benefit ul,
+.iso-storage ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.iso-benefit li,
+.iso-storage li {
+    padding: 0.3rem 0;
+    color: var(--color-light);
+    position: relative;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.iso-benefit li::before,
+.iso-storage li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+}
+
+/* Responsive Design for Compact Sections */
+@media (max-width: 768px) {
+    .audio-equipment-grid,
+    .camera-accessories-grid,
+    .iso-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .accessory-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mixer-options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .monitor-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .switcher-comparison {
+        grid-template-columns: 1fr;
     }
 }
