@@ -13,12 +13,21 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=3600"
         }
       ]
     },
     {
       "source": "/video-podcast-setup-guide.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/video-cast-gear-options.html",
       "headers": [
         {
           "key": "Cache-Control",
